@@ -19,5 +19,16 @@ app.get('/',(req,res,next)=>{
     res.render('index')
 })
 
+app.get('/contact',(req,res,next)=>{
+    res.render('contact')
+})
+
+app.get('/about',(req,res,next)=>{
+    res.render('about')
+})
+
+app.get('/books',(req,res,next)=>{
+    res.render('books')
+})
 
 app.listen(3100,()=>console.log('server run on port 3100'))
