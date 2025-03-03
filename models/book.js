@@ -13,10 +13,10 @@ var schemaBook=mongoose.Schema({
 })
 
 var Book=mongoose.model('book',schemaBook)
-var url='mongo://localhost:27017/library'
+var url='mongodb://localhost:27017/library'
 exports.getallbooks=()=>{
     return new Promise((resolve,reject)=>{
-        mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopologie:true}).then(()=>{
+        mongoose.connect(url,{useNewUrlParser:true}).then(()=>{
             return Book.find({})
 
         }).then(books=>{
